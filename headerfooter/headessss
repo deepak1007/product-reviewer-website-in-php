@@ -1,0 +1,120 @@
+<div class='container-fluid bg-dark'>
+    <div class='row'>
+        <div class='col-xl-3 col-sm-4'>
+            <h3 class='text-warning'>reviewIt</h3>
+        </div>
+        <div class='col-xl-2 col-sm-1'>
+            
+        </div>
+        <div class='col-xl-7 col-sm-7'>
+          <div class="navbar navbar-expand-md bg-dark navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <ul class='collapse navbar-collapse nav-pills' id='collapsibleNavbar' style='list-style-type:none'>
+                  <li class='nav-item bg-dark dropdown'>
+                      
+                         <!-- <button class='btn text-white bg-dark dropdown-toggle' data-toggle='dropdown'>CATEGORIES</button>-->
+                         <a class="nav-link text-white dropdown-toggle" data-toggle="dropdown" href="#">CATEGORIES</a>
+                       
+
+                          <div class='dropdown-menu'>
+                              <a href="#" class='dropdown-item'>
+                                  phones
+                              </a>
+                              <a href="#" class='dropdown-item'>
+                                phones
+                            </a>
+                            <a href="#" class='dropdown-item'>
+                                phones
+                            </a>
+                          </div>
+                      </div>
+
+                  </li>
+              </ul>
+          </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+ <div id="menu1" class="container tab-pane <?php echo isset($_GET['user'])?"active": "fade";?> "><br>
+   
+    <?php
+    $query2 = "select * from posts where user_id=?";
+    $smt = $con->prepare($query2);
+    $smt->execute(array($user_id));
+    
+    while($post = $smt->fetch())
+    {?>
+    <a href='postread.php?post_id=<?php echo $post['post_id']; ?>' title='go to page'>
+    <div class='profile-activities'>
+
+    <h5><?php echo $post['post_heading'] ?> <small>- posted on <?php echo date('d/m/y', $post['post_date']) ?> </small></h5>
+    
+      
+    
+    <div>
+      <ul class='list-inline'>
+        <li class='list-inline-item'><i class='fa fa-arrow-up'></i>&nbsp;<?php echo $post['upvotes']; ?></li>
+        <li class='list-inline-item'><i class='fa fa-arrow-down'></i>&nbsp;<?php echo $post['downvotes'] ?></li>
+        <li class='list-inline-item'><i clas=''>f</i>&nbsp;<?php echo $post['downvotes'] ?></li>
+      </ul>
+    </div>
+   
+    </div>
+    </a>
+    
+   <?php 
+    }
+    ?>
+   </div> 
+   
+
+
+    <div id="menu2" class="container tab-pane fade"><br>
+    <?php
+    $query2 = "select * from posts where user_id=? and question_flag=1";
+    $smt = $con->prepare($query2);
+    $smt->execute(array($_SESSION['user_id']));
+    
+    while($question = $smt->fetch())
+    {?>
+     <a href='postread.php?post_id=<?php echo $question['post_id']; ?>' title='go to page'>
+    <div class='profile-activities'>
+    <h5>posted on <?php echo date('d/m/y', $question['post_date']) ?> </h5>
+    
+      <h3><small><?php echo $question['post_heading'] ?></small></h3>
+   
+    <div>
+      <ul class='list-inline'>
+        <li class='list-inline-item'><i class='fa fa-arrow-up'></i>&nbsp;<?php echo $question['upvotes']; ?></li>
+        <li class='list-inline-item'><i class='fa fa-arrow-down'></i>&nbsp;<?php echo $question['downvotes'] ?></li>
+        <li class='list-inline-item'><i clas=''>f</i>&nbsp;<?php echo $question['downvotes'] ?></li>
+      </ul>
+    </div>
+    </div></a>
+    <br>
+    
+    <?php
+    }
+    ?>
+    </div>
+
+
+
+
+
+
+    function send(t)
+    {
+      var start_time = document.getElementById('batch 1 waale input text ka id').value;
+      var con = new XMLHttpRequest();
+      var formdata = new FormData();
+      formdata.append()
+    }

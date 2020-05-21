@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/6567c43039.js" crossorigin='anonymous'></script>
+
+
+<style>
+.border-config{border:none;}
+
+@media screen and (min-width:765px)
+{
+.max-hide { display:none;}
+}
+
+ul { height:42px !important;}
+
+ul li , ul li a{ height:100% !important;}
+
+.dark-hover li a:hover
+{
+    background:black;
+}
+
+@media screen and (max-width:900px)
+{
+    .min-hide { width:700px; display:inline-block;}
+}
+@media screen and (max-width:889px)
+{
+.min-hide { width:0px; display:inline-block;}
+.hide { display:none !important;}
+}
+
+@media screen and (max-width:765px)
+{
+.min-hide { width:20vw !important; display:inline-block;}
+.hide-profile { display:none !important;}
+}
+
+@media screen and (max-width:350px)
+{
+.min-hide { width:15vw !important; display:inline-block;}
+}
+
+</style>
+</head>
+
+
+<body>
+
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+        <a class="navbar-brand pl-xl-4 text-warning " href="#">ReviewIt</a>
+         
+        <div class='min-hide'></div>
+
+        <ul class='nav max-hide' >  <li class="nav-item dropdown">
+            <button type='button' class='btn btn-dark dropdown-toggle' data-toggle='dropdown'><span><img class="" style='width:50px;' src='images/download.png'></span> </button>
+            <div class="dropdown-menu dropdown-menu-right bg-dark">
+             <div><a class="dropdown-item text-white" href="#">Phones</a>
+                <a class="dropdown-item text-white" href="#">Television</a>
+                <a class="dropdown-item text-white" href="#">Kitchen</a></div>  
+                <div><a class="dropdown-item text-white" href="#">Phones</a>
+                    <a class="dropdown-item text-white" href="#">Television</a>
+                    <a class="dropdown-item text-white" href="#">Kitchen</a></div>
+            </div></div>
+        </li></ul>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class='col-xl-3 col-md-1'></div>
+        
+        
+        
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          
+          <div class='col-xl-2 col-md-1 col-sm-0 hide'>
+                 </div>
+       <!--search bar here -->
+          <form class="form-inline col p-0" action="/action_page.php">
+            <input class="form-control mr-sm-2 " type="text" style='width:80%' placeholder="Search">
+            <button class="btn btn-warning" type="submit"><i class='fa fa-search p-1' aria-hidden='true'></i> </button>
+          </form>
+
+          <ul class="navbar-nav dark-hover">
+            <li class="nav-item dropdown pr-4">
+                <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#">Categories</a>
+                <div class="dropdown-menu bg-dark border-config">
+                  <a class="dropdown-item text-white" href="#">Phones</a>
+                  <a class="dropdown-item text-white" href="#">Television</a>
+                  <a class="dropdown-item text-white" href="#">Kitchen</a>
+                 
+                </div>
+            </li>
+            <li class="nav-item pr-2">
+              <a class="nav-link text-white" style='display:none' href="#">login</a>
+            </li>
+          <!--  <li class="nav-item pr-2">
+              <a class="nav-link text-white" href="#">signup</a>
+            </li> --> 
+            
+            <li class="nav-item dropdown hide-profile">
+                <button type='button' class='btn btn-dark dropdown-toggle' data-toggle='dropdown'><span><img class="" style='width:50px;' src='images/download.png'></span> </button>
+                <div class="dropdown-menu dropdown-menu-right bg-dark">
+                  <a class="dropdown-item text-white" href="#">Phones</a>
+                  <a class="dropdown-item text-white" href="#">Television</a>
+                  <a class="dropdown-item text-white" href="#">Kitchen</a>
+                 
+                </div>
+            </li>
+           
+
+          </ul>
+          </div> 
+      </nav>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+/*header and footer */
+
+.border-config{border:none;}
+
+ul { height:42px !important;}
+
+ul li , ul li a{ height:100% !important;}
+
+.dark-hover li a:hover
+{
+    background:black;
+}
+/*header and footer end */
+
+
+
+
+
+
+
+/*login.php and login-area */
+
+#login-area{position:absolute;top:50%;display:none; left:50%; background:white; z-index:2; transform:translate(-50%, -50%);width:50%;padding:10px; box-shadow:40px 40px 150px rgba(0,0,0,0.2);}
+.login-form { display:flex; justify-content:center;}
+.login-form form{ width:100%;display:flex;align-items:center; flex-direction:column;}
+.login-form form input{width:90%; font-size:20px; padding:3px 5px;}
+.login-form form button {position:relative;}
+.closee {width:30px; color:grey; position:absolute; left:100%; top:10px; z-index:2}
+.closee h3:hover{color:black ; cursor:pointer}
+
+#signup-area{position:absolute;top:50%; left:50%;display:none; background:white; z-index:2; transform:translate(-50%, -50%);width:50%;padding:10px; box-shadow:40px 40px 150px rgba(0,0,0,0.2);}
+.signup-form { display:flex; justify-content:center;}
+.signup-form form{ width:80%;align-items:center; flex-direction:column;}
+.signup-form form input{width:100%; font-size:20px; padding:3px 5px; margin:5px 0px;}
+.signup-form form #firstname,#lastname { width:49.5%;}
+.signup-form form button {position:relative; left:50%; transform:translateX(-50%)}
+.signupclosee {width:30px; color:grey; position:absolute; left:100%; top:10px; }
+.signupclosee h3:hover{color:black ; cursor:pointer}
+
+
+.extra-links h4, h5 {cursor:pointer}
+
+
+
+.card {box-shadow:20px 20px 70px rgba(0,0,0,0.2);}
+
+
+
+@media (max-width:800px)
+{
+ #login-area {width:90%}
+ .closee{left:90%}
+ #signup-area {width:90%;}
+.signupclosee {left:90%}
+}
+
+
+
+/* postreader and comment section */
+
+#comment_post_button { position:relative; left:50%; transform:translateX(-50%); font-size:18px;}
+.repliesbutton {cursor:pointer; color:blue}
+.repliesbutton:hover { color:black;}
+
+
+
+
+/*post box */
+.post-box {
+    background:white
+    
+}
+
+.post_features{border-left:5px solid orange;}
+.post_features ul{
+    padding:6px;
+    margin-bottom : 20px;
+    background:whitesmoke
+
+}
+
+.suggested_topic_link_box{
+    background:white;
+    display:block;
+    padding:10px 5px;
+    border-left:5px solid orange
+
+}
+
+.suggested_topic_link_box:hover {
+    border-left:5px solid green;
+}
+
+.suggested_topic_link_box a{
+    width:100%;
+    display:block;
+    text-decoration: none;
+}
+
+.profile-activities{
+    background:white;
+    display:block;
+    padding-left:10px;
+    padding-top:10px;
+    border-left:5px solid orange
+
+}
+
+.profile-activities:hover {
+    border-left:5px solid green;
+}
+
+
+
+/* profile details in postread.php */
+
+
+#writer-details .profile_picture{
+
+    height:100px;
+
+
+}
+
+#writer-details .profile_picture img {
+    width:100px;
+    height:100%;
+
+}
+
+#writer-details .name-username h5 a{
+    text-decoration:none;
+}
+
+#writer-details .message h5 a{
+    text-decoration:none;
+}
+
+
+
+
+.emoticons{
+    display:none;
+    width: 350px !important; margin:5px;
+    position:absolute;
+    top:0;
+    transform: translateY(-100%);
+    border:5px solid black;
+    padding:10px;
+    background:white;
+}
+
+.emoticons .flex-box-container {
+    display:flex ;
+    flex-direction: row;
+    justify-content: flex-start;
+   
+    flex-wrap: wrap;
+    
+}
+
+
+ .emojibutton {
+    display:inline-block;
+    font-size: 15px;
+    padding:3px;
+    user-select: none;
+    cursor:pointer;
+}
+.emoticons .flex-box-container .individual-emote{
+    display:inline-block;
+    font-size: 20px;
+    padding:3px;
+    border:1px solid black;
+    cursor:pointer;
+    flex-shrink: 1;
+    user-select: none;
+
+}
+
+.emoticons .flex-box-container .individual-emote:hover{
+    transform: scale(1.2);
+    margin: 2px 2px;
+    font-size:25px;
+}
